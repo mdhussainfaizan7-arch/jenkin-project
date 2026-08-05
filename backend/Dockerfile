@@ -20,8 +20,8 @@ EXPOSE 8080
 CMD ["sh", "-c", "sleep 30 && java -jar app.jar"]  
 
 
-# if we write CMD in shell form no need to use sh
-# CMD sleep 30 && java -jar app.jar
+ # if we write CMD in shell form no need to use sh
+ # CMD sleep 30 && java -jar app.jar
 
-# sleep 30 second is used beacuse, mysql database take some time to run 
-# and front end run 
+ # sleep 30 second is used beacuse, mysql database take some time to run 
+ # and front end run 
