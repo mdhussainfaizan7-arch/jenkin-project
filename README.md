@@ -225,7 +225,7 @@ Through this project, I learned:
 
 ## 👨‍💻 Author
 
-**Mohammed Hussain 
+Mohammed Hussain 
 
 📧 Email: mdhussainfaizan7@gmail.com
 
