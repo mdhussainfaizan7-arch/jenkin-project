@@ -1,4 +1,5 @@
 # 🚀 AWS Three-Tier Employee Registration Application
+CI/CD: Jenkins Pipeline for automated build and deployment
 
 A modern Three-Tier Web Application built using **HTML, CSS, JavaScript, Spring Boot, MySQL, and AWS EC2**. This project demonstrates the deployment of a complete web application following a three-tier architecture.
 
