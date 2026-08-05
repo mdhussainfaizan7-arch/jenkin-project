@@ -4,167 +4,131 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>Employee Registration Portal</title>
+<title>Employee Registration</title>
 
-<link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
 
 <style>
+
+:root{
+
+--bg:#0d1117;
+--card:#161b22;
+--border:#30363d;
+--text:#f0f6fc;
+--muted:#8b949e;
+--primary:#238636;
+--primaryHover:#2ea043;
+--input:#21262d;
+
+}
 
 *{
 margin:0;
 padding:0;
 box-sizing:border-box;
-font-family:'Outfit',sans-serif;
+font-family:"Inter",sans-serif;
 }
 
 body{
 
-height:100vh;
+background:var(--bg);
+
 display:flex;
 justify-content:center;
 align-items:center;
 
-background:linear-gradient(-45deg,#0F172A,#312E81,#2563EB,#06B6D4);
-background-size:400% 400%;
-animation:bg 12s ease infinite;
+height:100vh;
+
+color:var(--text);
 
 }
 
-@keyframes bg{
-
-0%{background-position:0% 50%;}
-50%{background-position:100% 50%;}
-100%{background-position:0% 50%;}
-
-}
-
-.card{
+.container{
 
 width:430px;
 
-background:rgba(255,255,255,.12);
+background:var(--card);
 
-backdrop-filter:blur(18px);
+border:1px solid var(--border);
 
-border:1px solid rgba(255,255,255,.15);
+border-radius:12px;
 
-border-radius:22px;
+padding:32px;
 
-padding:35px;
-
-box-shadow:0 20px 45px rgba(0,0,0,.25);
-
-animation:popup .8s ease;
-
-}
-
-@keyframes popup{
-
-from{
-
-opacity:0;
-transform:translateY(40px);
-
-}
-
-to{
-
-opacity:1;
-transform:translateY(0);
-
-}
-
-}
-
-.logo{
-
-font-size:55px;
-text-align:center;
+box-shadow:0 12px 32px rgba(0,0,0,.35);
 
 }
 
 h1{
 
-text-align:center;
-color:white;
-font-size:30px;
-margin-top:10px;
+font-size:26px;
+
+font-weight:700;
+
+margin-bottom:6px;
 
 }
 
 .subtitle{
 
-text-align:center;
-color:#E2E8F0;
-margin:10px 0 30px;
+color:var(--muted);
 
-}
+font-size:14px;
 
-.inputBox{
-
-position:relative;
 margin-bottom:28px;
 
 }
 
-.inputBox input{
+.form-group{
+
+margin-bottom:20px;
+
+}
+
+label{
+
+display:block;
+
+font-size:14px;
+
+margin-bottom:8px;
+
+font-weight:500;
+
+}
+
+input{
 
 width:100%;
-padding:16px 14px;
 
-background:rgba(255,255,255,.15);
+padding:13px;
 
-border:none;
+background:var(--input);
 
-border-radius:12px;
+border:1px solid var(--border);
+
+border-radius:8px;
 
 color:white;
 
 font-size:15px;
 
+transition:.25s;
+
+}
+
+input::placeholder{
+
+color:var(--muted);
+
+}
+
+input:focus{
+
 outline:none;
 
-transition:.3s;
-
-}
-
-.inputBox label{
-
-position:absolute;
-
-left:15px;
-top:16px;
-
-color:#CBD5E1;
-
-pointer-events:none;
-
-transition:.3s;
-
-}
-
-.inputBox input:focus,
-.inputBox input:valid{
-
-background:rgba(255,255,255,.2);
-
-}
-
-.inputBox input:focus+label,
-.inputBox input:valid+label{
-
-top:-11px;
-left:12px;
-
-background:#2563EB;
-
-padding:2px 8px;
-
-border-radius:20px;
-
-font-size:12px;
-
-color:white;
+border-color:var(--primary);
 
 }
 
@@ -172,81 +136,57 @@ button{
 
 width:100%;
 
-padding:16px;
+padding:14px;
+
+background:var(--primary);
 
 border:none;
 
-border-radius:14px;
-
-background:linear-gradient(90deg,#6366F1,#3B82F6);
+border-radius:8px;
 
 color:white;
 
-font-size:17px;
+font-size:15px;
 
 font-weight:600;
 
 cursor:pointer;
 
-transition:.35s;
+transition:.25s;
 
 }
 
 button:hover{
 
-transform:translateY(-3px);
-
-box-shadow:0 15px 30px rgba(59,130,246,.45);
-
-}
-
-button:active{
-
-transform:scale(.98);
+background:var(--primaryHover);
 
 }
 
 #result{
 
-margin-top:22px;
+margin-top:18px;
+
+font-size:14px;
 
 text-align:center;
 
-font-weight:600;
-
-color:white;
-
-}
-
-.divider{
-
-margin:30px 0;
-
-text-align:center;
-
-color:#E2E8F0;
-
-font-size:13px;
+font-weight:500;
 
 }
 
 .footer{
 
-text-align:center;
+margin-top:28px;
 
-color:#CBD5E1;
+text-align:center;
 
 font-size:13px;
 
-line-height:24px;
+color:var(--muted);
 
-}
+border-top:1px solid var(--border);
 
-.footer span{
-
-color:white;
-
-font-weight:600;
+padding-top:18px;
 
 }
 
@@ -256,54 +196,55 @@ font-weight:600;
 
 <body>
 
-<div class="card">
+<div class="container">
 
-<div class="logo">💼</div>
-
-<h1>Employee Portal</h1>
+<h1>Employee Registration</h1>
 
 <p class="subtitle">
-✨ Join Our Amazing Team ✨
+Register a new employee into the system.
 </p>
 
 <form id="employeeForm">
 
-<div class="inputBox">
+<div class="form-group">
+
+<label for="name">Full Name</label>
 
 <input
 type="text"
 id="name"
+placeholder="John Doe"
 required>
-
-<label>👤 Full Name</label>
 
 </div>
 
-<div class="inputBox">
+<div class="form-group">
+
+<label for="email">Email Address</label>
 
 <input
 type="email"
 id="email"
+placeholder="john@example.com"
 required>
-
-<label>📧 Work Email</label>
 
 </div>
 
-<div class="inputBox">
+<div class="form-group">
+
+<label for="designation">Designation</label>
 
 <input
 type="text"
 id="designation"
+placeholder="Software Engineer"
 required>
-
-<label>💻 Designation</label>
 
 </div>
 
 <button type="submit">
 
-🚀 Register Employee
+Register Employee
 
 </button>
 
@@ -311,23 +252,9 @@ required>
 
 <div id="result"></div>
 
-<div class="divider">
-
-━━━━━━━━━━━━━━━━━━━━━━━━
-
-</div>
-
 <div class="footer">
 
-⭐ Excellence Begins Here ⭐
-
-<br><br>
-
-Made with ❤️ using HTML • CSS • JavaScript
-
-<br>
-
-© 2026 Employee Registration Portal
+Employee Management Portal • Version 1.0
 
 </div>
 
@@ -335,22 +262,24 @@ Made with ❤️ using HTML • CSS • JavaScript
 
 <script>
 
-document.getElementById("employeeForm").addEventListener("submit",async function(e){
+const form=document.getElementById("employeeForm");
+
+const result=document.getElementById("result");
+
+const button=document.querySelector("button");
+
+form.addEventListener("submit",async(e)=>{
 
 e.preventDefault();
 
-const btn=document.querySelector("button");
+button.disabled=true;
 
-btn.disabled=true;
-
-btn.innerHTML="⏳ Registering...";
+button.innerText="Submitting...";
 
 const employee={
 
 name:document.getElementById("name").value,
-
 email:document.getElementById("email").value,
-
 designation:document.getElementById("designation").value
 
 };
@@ -373,27 +302,26 @@ body:JSON.stringify(employee)
 
 const message=await response.text();
 
-document.getElementById("result").style.color="#BBF7D0";
+result.style.color="#3fb950";
 
-document.getElementById("result").innerHTML="✅ "+message+" 🎉";
+result.innerText=message;
 
-document.getElementById("employeeForm").reset();
+form.reset();
 
 }
+catch{
 
-catch(error){
+result.style.color="#f85149";
 
-document.getElementById("result").style.color="#FECACA";
-
-document.getElementById("result").innerHTML="❌ Unable to register employee. Please try again.";
+result.innerText="Registration failed.";
 
 }
 
 finally{
 
-btn.disabled=false;
+button.disabled=false;
 
-btn.innerHTML="🚀 Register Employee";
+button.innerText="Register Employee";
 
 }
 
@@ -402,4 +330,4 @@ btn.innerHTML="🚀 Register Employee";
 </script>
 
 </body>
-</html> 
+</html>
