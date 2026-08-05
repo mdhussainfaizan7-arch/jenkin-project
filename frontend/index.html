@@ -4,134 +4,249 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>✨ Employee Registration Portal ✨</title>
+<title>Employee Registration Portal</title>
 
-<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 
 <style>
 
 *{
-    margin:0;
-    padding:0;
-    box-sizing:border-box;
-    font-family:'Poppins',sans-serif;
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:'Outfit',sans-serif;
 }
 
 body{
-    min-height:100vh;
-    display:flex;
-    justify-content:center;
-    align-items:center;
-    background:linear-gradient(135deg,#4F46E5,#06B6D4,#3B82F6);
+
+height:100vh;
+display:flex;
+justify-content:center;
+align-items:center;
+
+background:linear-gradient(-45deg,#0F172A,#312E81,#2563EB,#06B6D4);
+background-size:400% 400%;
+animation:bg 12s ease infinite;
+
 }
 
-.container{
+@keyframes bg{
 
-    width:430px;
-    background:rgba(255,255,255,.15);
-    backdrop-filter:blur(20px);
-    border-radius:20px;
-    padding:35px;
-    box-shadow:0 20px 45px rgba(0,0,0,.25);
-    border:1px solid rgba(255,255,255,.2);
+0%{background-position:0% 50%;}
+50%{background-position:100% 50%;}
+100%{background-position:0% 50%;}
+
+}
+
+.card{
+
+width:430px;
+
+background:rgba(255,255,255,.12);
+
+backdrop-filter:blur(18px);
+
+border:1px solid rgba(255,255,255,.15);
+
+border-radius:22px;
+
+padding:35px;
+
+box-shadow:0 20px 45px rgba(0,0,0,.25);
+
+animation:popup .8s ease;
+
+}
+
+@keyframes popup{
+
+from{
+
+opacity:0;
+transform:translateY(40px);
+
+}
+
+to{
+
+opacity:1;
+transform:translateY(0);
+
+}
+
+}
+
+.logo{
+
+font-size:55px;
+text-align:center;
 
 }
 
 h1{
 
-    text-align:center;
-    color:white;
-    margin-bottom:8px;
-    font-size:30px;
+text-align:center;
+color:white;
+font-size:30px;
+margin-top:10px;
 
 }
 
 .subtitle{
 
-    text-align:center;
-    color:#E5E7EB;
-    margin-bottom:30px;
-    font-size:14px;
+text-align:center;
+color:#E2E8F0;
+margin:10px 0 30px;
 
 }
 
-.group{
+.inputBox{
 
-    margin-bottom:18px;
-
-}
-
-label{
-
-    color:white;
-    display:block;
-    margin-bottom:7px;
-    font-weight:500;
+position:relative;
+margin-bottom:28px;
 
 }
 
-input{
+.inputBox input{
 
-    width:100%;
-    padding:14px;
-    border:none;
-    border-radius:10px;
-    outline:none;
-    font-size:15px;
-    transition:.3s;
+width:100%;
+padding:16px 14px;
+
+background:rgba(255,255,255,.15);
+
+border:none;
+
+border-radius:12px;
+
+color:white;
+
+font-size:15px;
+
+outline:none;
+
+transition:.3s;
 
 }
 
-input:focus{
+.inputBox label{
 
-    transform:scale(1.02);
-    box-shadow:0 0 12px rgba(255,255,255,.6);
+position:absolute;
+
+left:15px;
+top:16px;
+
+color:#CBD5E1;
+
+pointer-events:none;
+
+transition:.3s;
+
+}
+
+.inputBox input:focus,
+.inputBox input:valid{
+
+background:rgba(255,255,255,.2);
+
+}
+
+.inputBox input:focus+label,
+.inputBox input:valid+label{
+
+top:-11px;
+left:12px;
+
+background:#2563EB;
+
+padding:2px 8px;
+
+border-radius:20px;
+
+font-size:12px;
+
+color:white;
 
 }
 
 button{
 
-    width:100%;
-    padding:15px;
-    border:none;
-    border-radius:12px;
-    background:#FACC15;
-    color:#111827;
-    font-size:17px;
-    font-weight:700;
-    cursor:pointer;
-    transition:.3s;
+width:100%;
+
+padding:16px;
+
+border:none;
+
+border-radius:14px;
+
+background:linear-gradient(90deg,#6366F1,#3B82F6);
+
+color:white;
+
+font-size:17px;
+
+font-weight:600;
+
+cursor:pointer;
+
+transition:.35s;
 
 }
 
 button:hover{
 
-    transform:translateY(-3px);
-    background:#FDE047;
+transform:translateY(-3px);
+
+box-shadow:0 15px 30px rgba(59,130,246,.45);
 
 }
 
 button:active{
 
-    transform:scale(.97);
+transform:scale(.98);
 
 }
 
 #result{
 
-    margin-top:20px;
-    text-align:center;
-    font-weight:600;
-    color:#ffffff;
+margin-top:22px;
+
+text-align:center;
+
+font-weight:600;
+
+color:white;
+
+}
+
+.divider{
+
+margin:30px 0;
+
+text-align:center;
+
+color:#E2E8F0;
+
+font-size:13px;
 
 }
 
 .footer{
 
-    text-align:center;
-    margin-top:22px;
-    color:white;
-    font-size:13px;
+text-align:center;
+
+color:#CBD5E1;
+
+font-size:13px;
+
+line-height:24px;
+
+}
+
+.footer span{
+
+color:white;
+
+font-weight:600;
 
 }
 
@@ -141,67 +256,78 @@ button:active{
 
 <body>
 
-<div class="container">
+<div class="card">
 
-<h1>👨‍💼 Employee Portal</h1>
+<div class="logo">💼</div>
+
+<h1>Employee Portal</h1>
 
 <p class="subtitle">
-✨ Register New Team Member ✨
+✨ Join Our Amazing Team ✨
 </p>
 
 <form id="employeeForm">
 
-<div class="group">
-
-<label>🧑 Full Name</label>
+<div class="inputBox">
 
 <input
 type="text"
 id="name"
-placeholder="🌟 Enter your full name"
 required>
+
+<label>👤 Full Name</label>
 
 </div>
 
-<div class="group">
-
-<label>📧 Email Address</label>
+<div class="inputBox">
 
 <input
 type="email"
 id="email"
-placeholder="📩 john@example.com"
 required>
+
+<label>📧 Work Email</label>
 
 </div>
 
-<div class="group">
-
-<label>💼 Designation</label>
+<div class="inputBox">
 
 <input
 type="text"
 id="designation"
-placeholder="🚀 Software Engineer"
 required>
+
+<label>💻 Designation</label>
 
 </div>
 
 <button type="submit">
-✨ Register Employee 🚀
+
+🚀 Register Employee
+
 </button>
 
 </form>
 
 <div id="result"></div>
 
+<div class="divider">
+
+━━━━━━━━━━━━━━━━━━━━━━━━
+
+</div>
+
 <div class="footer">
 
-💙 Welcome to Our Company 💙<br>
+⭐ Excellence Begins Here ⭐
 
-━━━━━━━━━━━━━━━━━━━━━━<br>
+<br><br>
 
-★ Together We Build ★
+Made with ❤️ using HTML • CSS • JavaScript
+
+<br>
+
+© 2026 Employee Registration Portal
 
 </div>
 
@@ -213,15 +339,18 @@ document.getElementById("employeeForm").addEventListener("submit",async function
 
 e.preventDefault();
 
-const button=document.querySelector("button");
+const btn=document.querySelector("button");
 
-button.disabled=true;
-button.innerHTML="⏳ Registering...";
+btn.disabled=true;
+
+btn.innerHTML="⏳ Registering...";
 
 const employee={
 
 name:document.getElementById("name").value,
+
 email:document.getElementById("email").value,
+
 designation:document.getElementById("designation").value
 
 };
@@ -233,7 +362,9 @@ const response=await fetch("/api",{
 method:"POST",
 
 headers:{
+
 "Content-Type":"application/json"
+
 },
 
 body:JSON.stringify(employee)
@@ -243,22 +374,26 @@ body:JSON.stringify(employee)
 const message=await response.text();
 
 document.getElementById("result").style.color="#BBF7D0";
+
 document.getElementById("result").innerHTML="✅ "+message+" 🎉";
 
 document.getElementById("employeeForm").reset();
 
 }
-catch{
+
+catch(error){
 
 document.getElementById("result").style.color="#FECACA";
-document.getElementById("result").innerHTML="❌ Registration Failed! Please try again.";
+
+document.getElementById("result").innerHTML="❌ Unable to register employee. Please try again.";
 
 }
 
 finally{
 
-button.disabled=false;
-button.innerHTML="✨ Register Employee 🚀";
+btn.disabled=false;
+
+btn.innerHTML="🚀 Register Employee";
 
 }
 
