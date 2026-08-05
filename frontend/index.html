@@ -1,189 +1,266 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Employee Registration Portal</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap" rel="stylesheet">
+<title>✨ Employee Registration Portal ✨</title>
 
-    <style>
-        *{
-            margin:0;
-            padding:0;
-            box-sizing:border-box;
-            font-family:'Poppins',sans-serif;
-        }
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 
-        body{
-            background:linear-gradient(135deg,#eef4ff,#d9ecff);
-            display:flex;
-            justify-content:center;
-            align-items:center;
-            min-height:100vh;
-        }
+<style>
 
-        .card{
-            width:420px;
-            background:#ffffff;
-            padding:35px;
-            border-radius:15px;
-            box-shadow:0 15px 35px rgba(0,0,0,0.15);
-        }
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:'Poppins',sans-serif;
+}
 
-        h2{
-            text-align:center;
-            margin-bottom:25px;
-            color:#1e3a8a;
-        }
+body{
+    min-height:100vh;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    background:linear-gradient(135deg,#4F46E5,#06B6D4,#3B82F6);
+}
 
-        .input-box{
-            margin-bottom:18px;
-        }
+.container{
 
-        label{
-            display:block;
-            margin-bottom:7px;
-            font-size:14px;
-            font-weight:500;
-            color:#444;
-        }
+    width:430px;
+    background:rgba(255,255,255,.15);
+    backdrop-filter:blur(20px);
+    border-radius:20px;
+    padding:35px;
+    box-shadow:0 20px 45px rgba(0,0,0,.25);
+    border:1px solid rgba(255,255,255,.2);
 
-        input{
-            width:100%;
-            padding:12px;
-            border:1px solid #cbd5e1;
-            border-radius:8px;
-            font-size:15px;
-            transition:.3s;
-        }
+}
 
-        input:focus{
-            border-color:#2563eb;
-            outline:none;
-            box-shadow:0 0 5px rgba(37,99,235,.3);
-        }
+h1{
 
-        button{
-            width:100%;
-            padding:13px;
-            border:none;
-            border-radius:8px;
-            background:#2563eb;
-            color:white;
-            font-size:16px;
-            font-weight:600;
-            cursor:pointer;
-            transition:.3s;
-        }
+    text-align:center;
+    color:white;
+    margin-bottom:8px;
+    font-size:30px;
 
-        button:hover{
-            background:#1d4ed8;
-        }
+}
 
-        button:active{
-            transform:scale(.98);
-        }
+.subtitle{
 
-        #result{
-            margin-top:20px;
-            text-align:center;
-            font-weight:500;
-            color:green;
-        }
-    </style>
+    text-align:center;
+    color:#E5E7EB;
+    margin-bottom:30px;
+    font-size:14px;
+
+}
+
+.group{
+
+    margin-bottom:18px;
+
+}
+
+label{
+
+    color:white;
+    display:block;
+    margin-bottom:7px;
+    font-weight:500;
+
+}
+
+input{
+
+    width:100%;
+    padding:14px;
+    border:none;
+    border-radius:10px;
+    outline:none;
+    font-size:15px;
+    transition:.3s;
+
+}
+
+input:focus{
+
+    transform:scale(1.02);
+    box-shadow:0 0 12px rgba(255,255,255,.6);
+
+}
+
+button{
+
+    width:100%;
+    padding:15px;
+    border:none;
+    border-radius:12px;
+    background:#FACC15;
+    color:#111827;
+    font-size:17px;
+    font-weight:700;
+    cursor:pointer;
+    transition:.3s;
+
+}
+
+button:hover{
+
+    transform:translateY(-3px);
+    background:#FDE047;
+
+}
+
+button:active{
+
+    transform:scale(.97);
+
+}
+
+#result{
+
+    margin-top:20px;
+    text-align:center;
+    font-weight:600;
+    color:#ffffff;
+
+}
+
+.footer{
+
+    text-align:center;
+    margin-top:22px;
+    color:white;
+    font-size:13px;
+
+}
+
+</style>
+
 </head>
 
 <body>
 
-<div class="card">
+<div class="container">
 
-    <h2>Employee Registration</h2>
+<h1>👨‍💼 Employee Portal</h1>
 
-    <form id="employeeForm">
+<p class="subtitle">
+✨ Register New Team Member ✨
+</p>
 
-        <div class="input-box">
-            <label for="name">Full Name</label>
-            <input
-                type="text"
-                id="name"
-                placeholder="Enter full name"
-                required>
-        </div>
+<form id="employeeForm">
 
-        <div class="input-box">
-            <label for="email">Email Address</label>
-            <input
-                type="email"
-                id="email"
-                placeholder="example@email.com"
-                required>
-        </div>
+<div class="group">
 
-        <div class="input-box">
-            <label for="designation">Job Role</label>
-            <input
-                type="text"
-                id="designation"
-                placeholder="Frontend Developer"
-                required>
-        </div>
+<label>🧑 Full Name</label>
 
-        <button type="submit">Register Employee</button>
+<input
+type="text"
+id="name"
+placeholder="🌟 Enter your full name"
+required>
 
-    </form>
+</div>
 
-    <p id="result"></p>
+<div class="group">
+
+<label>📧 Email Address</label>
+
+<input
+type="email"
+id="email"
+placeholder="📩 john@example.com"
+required>
+
+</div>
+
+<div class="group">
+
+<label>💼 Designation</label>
+
+<input
+type="text"
+id="designation"
+placeholder="🚀 Software Engineer"
+required>
+
+</div>
+
+<button type="submit">
+✨ Register Employee 🚀
+</button>
+
+</form>
+
+<div id="result"></div>
+
+<div class="footer">
+
+💙 Welcome to Our Company 💙<br>
+
+━━━━━━━━━━━━━━━━━━━━━━<br>
+
+★ Together We Build ★
+
+</div>
 
 </div>
 
 <script>
 
-document.getElementById("employeeForm").addEventListener("submit", async function(e){
+document.getElementById("employeeForm").addEventListener("submit",async function(e){
 
-    e.preventDefault();
+e.preventDefault();
 
-    const btn = document.querySelector("button");
+const button=document.querySelector("button");
 
-    btn.disabled = true;
-    btn.innerText = "Please Wait...";
+button.disabled=true;
+button.innerHTML="⏳ Registering...";
 
-    const employee = {
-        name: document.getElementById("name").value,
-        email: document.getElementById("email").value,
-        designation: document.getElementById("designation").value
-    };
+const employee={
 
-    try{
+name:document.getElementById("name").value,
+email:document.getElementById("email").value,
+designation:document.getElementById("designation").value
 
-        const response = await fetch("/api",{
-            method:"POST",
-            headers:{
-                "Content-Type":"application/json"
-            },
-            body:JSON.stringify(employee)
-        });
+};
 
-        const message = await response.text();
+try{
 
-        document.getElementById("result").style.color="green";
-        document.getElementById("result").innerText=message;
+const response=await fetch("/api",{
 
-        document.getElementById("employeeForm").reset();
+method:"POST",
 
-    }
-    catch(error){
+headers:{
+"Content-Type":"application/json"
+},
 
-        document.getElementById("result").style.color="red";
-        document.getElementById("result").innerText="Unable to register employee.";
+body:JSON.stringify(employee)
 
-    }
-    finally{
+});
 
-        btn.disabled=false;
-        btn.innerText="Register Employee";
+const message=await response.text();
 
-    }
+document.getElementById("result").style.color="#BBF7D0";
+document.getElementById("result").innerHTML="✅ "+message+" 🎉";
+
+document.getElementById("employeeForm").reset();
+
+}
+catch{
+
+document.getElementById("result").style.color="#FECACA";
+document.getElementById("result").innerHTML="❌ Registration Failed! Please try again.";
+
+}
+
+finally{
+
+button.disabled=false;
+button.innerHTML="✨ Register Employee 🚀";
+
+}
 
 });
 
