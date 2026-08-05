@@ -180,31 +180,6 @@ mvn spring-boot:run
 http://localhost:8080
 ```
 
----
-
-## 📷 Screenshots
-
-### 🖥️ Application UI
-
-(Add your UI screenshot here)
-
----
-
-### ☁️ AWS EC2 Instance
-
-(Add EC2 screenshot here)
-
----
-
-### 🗄️ MySQL Database
-
-(Add MySQL screenshot here)
-
----
-
-### 💻 Spring Boot Running
-
-(Add terminal screenshot here)
 
 ---
 
