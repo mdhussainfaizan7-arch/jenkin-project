@@ -225,12 +225,12 @@ Through this project, I learned:
 
 ## 👨‍💻 Author
 
-**Mohammed Hussain (Faizan)**
+**Mohammed Hussain 
 
-📧 Email: *(Add your email)*
+📧 Email: mdhussainfaizan7@gmail.com
 
 💼 LinkedIn:
-https://www.linkedin.com/in/your-linkedin-profile/
+https://www.linkedin.com/in/mohammed-hussain-62a14b418
 
 🐙 GitHub:
 https://github.com/mdhussainfaizan7-arch
@@ -242,9 +242,3 @@ https://github.com/mdhussainfaizan7-arch
 If you found this project helpful, please consider giving it a ⭐ on GitHub.
 
 Feedback and suggestions are always welcome!
-
----
-
-## 📜 License
-
-This project is created for learning and educational purposes.
